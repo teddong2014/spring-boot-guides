@@ -1,0 +1,5 @@
+##ignore build files
+RESTFUL-web-client/bin/
+RESTFUL-web-client/build/
+RESTFUL-web-service/bin/
+RESTFUL-web-service/build/
