@@ -1,5 +1,14 @@
 ##ignore build files
 RESTFUL-web-client/bin/
 RESTFUL-web-client/build/
+
+RESTFUL-web-service/neo4j.db/
 RESTFUL-web-service/bin/
 RESTFUL-web-service/build/
+
+neo4j-test/accessingdataneo4j.db/
+neo4j-test/bin/
+neo4j-test/build/
+
+actuator-test/bin/
+actuator-test/build/
