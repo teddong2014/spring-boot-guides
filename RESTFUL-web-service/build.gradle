@@ -56,6 +56,16 @@ dependencies {
     // JMS
     compile("org.springframework:spring-jms")
     compile("org.apache.activemq:activemq-broker")
+    // hateoas
+    compile("org.springframework.boot:spring-boot-starter-hateoas")
+    // gemfire
+    compile("org.springframework.boot:spring-boot-starter-data-gemfire")
+    runtime("org.springframework.shell:spring-shell:1.0.0.RELEASE")
+    // integration
+    compile("org.springframework.boot:spring-boot-starter-integration")
+    compile("org.springframework.integration:spring-integration-feed")
+    // json-path
+    testCompile("com.jayway.jsonpath:json-path")
     // ×Ô¶¯»¯²âÊÔ
     testCompile("org.springframework.boot:spring-boot-starter-test")
     testCompile("junit:junit")
