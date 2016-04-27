@@ -12,3 +12,7 @@ neo4j-test/build/
 
 actuator-test/bin/
 actuator-test/build/
+
+*/*.db/
+*/bin/
+*/build/

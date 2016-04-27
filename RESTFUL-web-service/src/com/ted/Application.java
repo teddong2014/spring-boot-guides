@@ -6,16 +6,19 @@ import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.stream.Collectors;
 
-import org.neo4j.graphdb.Transaction;
-import org.neo4j.io.fs.FileUtils;
+import javax.jms.ConnectionFactory;
+import javax.jms.JMSException;
+import javax.jms.Message;
+import javax.jms.Session;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.data.neo4j.core.GraphDatabase;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -23,14 +26,19 @@ import org.springframework.data.redis.listener.PatternTopic;
 import org.springframework.data.redis.listener.RedisMessageListenerContainer;
 import org.springframework.data.redis.listener.adapter.MessageListenerAdapter;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jms.annotation.EnableJms;
+import org.springframework.jms.config.JmsListenerContainerFactory;
+import org.springframework.jms.config.SimpleJmsListenerContainerFactory;
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.core.MessageCreator;
+import org.springframework.util.FileSystemUtils;
 
 import com.ted.broker.redis.receivers.Receiver;
-import com.ted.db.neo4j.Person;
-import com.ted.db.neo4j.PersonRepository;
 
 import redis.clients.jedis.JedisShardInfo;
 
 @SpringBootApplication
+@EnableJms
 //@EnableScheduling
 public class Application {
 	
@@ -39,10 +47,20 @@ public class Application {
 	@Autowired
     private JdbcTemplate jdbcTemplate;
 	
+	@Autowired
+	private JmsTemplate jmsTemplate;
+	
 	private static final Logger log = LoggerFactory.getLogger(Application.class);
 
     public static void main(String[] args) throws InterruptedException {
         SpringApplication.run(Application.class, args);
+    }
+    
+    @Bean // Strictly speaking this bean is not necessary as boot creates a default
+    JmsListenerContainerFactory<?> myJmsContainerFactory(ConnectionFactory connectionFactory) {
+        SimpleJmsListenerContainerFactory factory = new SimpleJmsListenerContainerFactory();
+        factory.setConnectionFactory(connectionFactory);
+        return factory;
     }
     
     /*@Bean
