@@ -85,3 +85,9 @@ sourceSets {
         }
     }
 }
+
+eclipse {
+    project {
+        natures += 'org.springframework.ide.eclipse.core.springnature'
+    }
+}

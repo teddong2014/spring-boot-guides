@@ -3,6 +3,7 @@ package com.ted.config;
 import java.util.concurrent.CountDownLatch;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -14,7 +15,7 @@ import com.ted.broker.redis.receivers.RedisReceiver;
 
 import redis.clients.jedis.JedisShardInfo;
 
-//@Configuration
+@Configuration
 public class RedisBrokerConfiguration {
 	@Bean
 	RedisMessageListenerContainer container(RedisConnectionFactory connectionFactory,

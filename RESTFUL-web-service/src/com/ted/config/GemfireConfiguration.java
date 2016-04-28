@@ -9,7 +9,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.gemfire.CacheFactoryBean;
 import org.springframework.data.gemfire.LocalRegionFactoryBean;
 import org.springframework.data.gemfire.repository.config.EnableGemfireRepositories;
+import org.springframework.data.gemfire.support.GemfireCacheManager;
 
+import com.gemstone.gemfire.cache.Cache;
 import com.gemstone.gemfire.cache.GemFireCache;
 import com.ted.db.gemfire.entities.GemfirePerson;
 import com.ted.db.gemfire.repositories.GemfirePersonRepository;
@@ -42,6 +44,23 @@ public class GemfireConfiguration {
         helloRegion.setName("hello");
         helloRegion.setPersistent(false);
         return helloRegion;
+    }
+    
+    @Bean
+    LocalRegionFactoryBean<String, Integer> quoteRegion(final GemFireCache cache) {
+        LocalRegionFactoryBean<String, Integer> quoteRegion = new LocalRegionFactoryBean<>();
+        quoteRegion.setCache(cache);
+        quoteRegion.setClose(false);
+        quoteRegion.setName("Quotes");
+        quoteRegion.setPersistent(false);
+        return quoteRegion;
+    }
+    
+    @Bean
+    GemfireCacheManager cacheManager(Cache gemfireCache) {
+        GemfireCacheManager cacheManager = new GemfireCacheManager();
+        cacheManager.setCache(gemfireCache);
+        return cacheManager;
     }
     
     @Autowired
