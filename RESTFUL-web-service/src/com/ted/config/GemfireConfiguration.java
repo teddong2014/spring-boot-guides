@@ -4,6 +4,7 @@ import java.util.Properties;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.gemfire.CacheFactoryBean;
@@ -18,6 +19,7 @@ import com.ted.db.gemfire.repositories.GemfirePersonRepository;
 
 @Configuration
 @EnableGemfireRepositories(basePackages="com.ted.db.gemfire.repositories")
+@EnableCaching
 public class GemfireConfiguration {
 	@Bean
     Properties gemfireProperties() {

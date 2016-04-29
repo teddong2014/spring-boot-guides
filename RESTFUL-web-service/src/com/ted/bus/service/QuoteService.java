@@ -64,8 +64,8 @@ public class QuoteService {
 	}
 
 	protected Quote requestQuote(String URL, Map<String, Object> urlVariables) {
+		System.out.println("---------------------------quoteResponse-------------------------------" + urlVariables);
 		QuoteResponse quoteResponse = quoteServiceTemplate.getForObject(URL, QuoteResponse.class, urlVariables);
-		System.out.println("---------------------------quoteResponse-------------------------------" + quoteResponse);
 		return quoteResponse.getQuote();
 	}
 
