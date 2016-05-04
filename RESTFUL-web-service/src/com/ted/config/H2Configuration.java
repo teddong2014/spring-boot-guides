@@ -25,6 +25,8 @@ public class H2Configuration {
     		initCustomer();
     		
     		initBookings();
+    		
+    		initJPA();
     	};
     }
 	
@@ -52,5 +54,22 @@ public class H2Configuration {
 		jdbcTemplate.execute("drop table BOOKINGS if exists");
 		jdbcTemplate.execute("create table BOOKINGS("
 				+ "ID serial, FIRST_NAME varchar(5) NOT NULL)");
+	}
+	
+	private void initJPA() {
+		log.info("Creating tables");
+		jdbcTemplate.execute("drop table jpa_entity if exists");
+		jdbcTemplate.execute("create table jpa_entity("
+				+ "id SERIAL, first_name VARCHAR(255), last_name VARCHAR(255))");
+		// Split up the array of whole names into an array of first/last names
+		List<Object[]> splitUpNames = Arrays.asList("J Woo", "P Dean", "A Bloch").stream()
+				.map(name -> name.split(" "))
+				.collect(Collectors.toList());
+		
+		// Use a Java 8 stream to print out each tuple of the list
+		splitUpNames.forEach(name -> log.info(String.format("Inserting jpa_entity record for %s %s", name[0], name[1])));
+		
+		// Uses JdbcTemplate's batchUpdate operation to bulk load data
+		jdbcTemplate.batchUpdate("INSERT INTO jpa_entity(first_name, last_name) VALUES (?,?)", splitUpNames);
 	}
 }

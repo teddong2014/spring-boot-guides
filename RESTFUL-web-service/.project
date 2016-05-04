@@ -5,6 +5,7 @@
 	<projects/>
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>org.springframework.ide.eclipse.core.springnature</nature>
 	</natures>
 	<buildSpec>
 		<buildCommand>

@@ -11,6 +11,8 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
+// war
+apply plugin: 'war'
 
 jar {
     baseName = 'RESTFUL-web-service'
@@ -26,7 +28,14 @@ repositories {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+// war
+configurations {
+    providedRuntime
+}
+
 dependencies {
+	// war
+	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 	// spring boot
     compile("org.springframework.boot:spring-boot-starter-web")
     // actuator 
@@ -64,6 +73,12 @@ dependencies {
     // integration
     compile("org.springframework.boot:spring-boot-starter-integration")
     compile("org.springframework.integration:spring-integration-feed")
+    // jpa
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    // lombok
+    compile("org.projectlombok:lombok:1.16.4")
+    // mongodb
+    compile("org.springframework.boot:spring-boot-starter-data-mongodb")
     // json-path
     testCompile("com.jayway.jsonpath:json-path")
     // ×Ô¶¯»¯²âÊÔ
