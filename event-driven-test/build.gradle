@@ -1,0 +1,48 @@
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.3.RELEASE")
+  }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+jar {
+  baseName = 'event-driven-test'
+  version = '0.3.0'
+}
+
+repositories {
+  mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+  compile "org.springframework.boot:spring-boot-starter-web",
+      "com.fasterxml.jackson.core:jackson-databind",
+      "io.projectreactor:reactor-bus"
+
+  testCompile("junit:junit")
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '2.12'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+        resources {
+        	srcDir 'resources'
+        }
+    }
+}
