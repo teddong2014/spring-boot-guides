@@ -16,3 +16,13 @@ actuator-test/build/
 */*.db/
 */bin/
 */build/
+
+RESTFUL-web-service/.gradle/2.12/taskArtifacts/*
+RESTFUL-web-service/.classpath
+RESTFUL-web-service/.settings/org.eclipse.jdt.core.prefs
+RESTFUL-web-service/build.gradle
+
+/.metadata
+/.recommenders
+/RemoteSystemsTempFiles
+dlx_workspace.zip
