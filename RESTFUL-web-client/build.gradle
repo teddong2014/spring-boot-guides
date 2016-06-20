@@ -29,6 +29,9 @@ dependencies {
     compile("org.springframework:spring-web")
     compile("com.fasterxml.jackson.core:jackson-databind")
     compile("org.projectlombok:lombok:1.16.8")
+    compile("org.apache.httpcomponents:httpclient")
+    compile("commons-codec:commons-codec")
+    compile("commons-logging:commons-logging")
     testCompile("junit:junit")
 }
 
