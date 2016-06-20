@@ -8,7 +8,6 @@
 	width: 100px;
 	height: 100px;
 	margin: auto;
-	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
@@ -37,7 +36,3 @@
 	margin: auto;
 }
 
-.mui-content.mui-fullscreen .mui-card {
-	margin: auto;	
-	width: 80%;
-}

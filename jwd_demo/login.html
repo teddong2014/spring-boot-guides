@@ -91,59 +91,41 @@
 	</head>
 
 	<body>
-		<div class="mui-content mui-fullscreen">
+		<div class="mui-content" style="background-color: #333333;">
+			<div style="height: 10%">
+				<div style="float: left;margin:10px"><span class="mui-icon mui-icon-compose"></span><a href="#">注册账号</a></div>
+				<div style="float: right;margin:10px""><span class="mui-icon mui-icon-help"></span><a href="#">找回密码</a></div>
+			</div>
 			<div class="mui-input-row" id="login-headimg">
-				<a href="#"><img src="images/qq.png"/></a>
+				<a href="#"><img src="images/default-headimg1.png"/></a>
 			</div>
-			<div class="mui-card">
-				<form id='login-form' class="mui-input-group">
-					<div class="mui-input-row">
-						<label><span class="mui-icon mui-icon-person"></span></label>
-						<input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入账号">
-					</div>
-					<div class="mui-input-row mui-password">
-						<label><span class="mui-icon mui-icon-locked"></span></label>
-						<input id='password' type="password" class="mui-input-clear mui-input" placeholder="请输入密码">
-					</div>
-				</form>
-			</div>
-			<div class="mui-content-padded">
-				<ul class="mui-table-view mui-table-view-chevron">
-					<li class="mui-table-view-cell">
-						自动登录
-						<div id="autoLogin" class="mui-switch">
-							<div class="mui-switch-handle"></div>
+			<div style="width: 80%;margin: 0 auto;padding: 0;">
+				<div class="mui-card" style="margin: 0;padding: 0;">
+					<form id='login-form' class="mui-input-group">
+						<div class="mui-input-row" style="height: 36px;">
+							<label><span class="mui-icon mui-icon-person" style="margin-top: -10px;"></span></label>
+							<input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入账号">
 						</div>
-					</li>
-				</ul>
-				<div class="link-area"><a id='reg'>自动登录</a>
+						<div class="mui-input-row mui-password" style="height: 36px;">
+							<label><span class="mui-icon mui-icon-locked" style="margin-top: -10px;"></span></label>
+							<input id='password' type="password" class="mui-input-clear mui-input" placeholder="请输入密码">
+						</div>
+					</form>
 				</div>
-			</div>
-			<div class="mui-card">
-				<form class="mui-input-group">
-					<div class="mui-input-row mui-checkbox mui-left">
-						<label>checked：false</label>
-						<input name="checkbox" value="Item 1" type="checkbox" >
+				<div class="mui-input-row mui-checkbox mui-left" style="float:right;margin: 5px;">
+				  <label><a href="#">自动登录</a></label>
+				  <input name="checkbox1" value="autoLogin" type="checkbox">
+				</div>
+				<div class="mui-content-padded" style="margin: 0;padding: 0;">
+					<button id='login' class="mui-btn mui-btn-block mui-btn-primary" style="line-height: 0.8;">登录</button>
 					</div>
-					<div class="mui-input-row mui-checkbox mui-left">
-						<label>checked：true</label>
-						<input name="checkbox" value="Item 2" type="checkbox" checked>
-					</div>
-					<div class="mui-input-row mui-checkbox mui-left mui-disabled">
-						<label>disabled checkbox</label>
-						<input name="checkbox" type="checkbox" disabled="disabled">
-					</div>
-				</form>
-			</div>
-			<div class="mui-content-padded">
-				<button id='login' class="mui-btn mui-btn-block mui-btn-primary">登录</button>
-				<div class=""><a id='reg'>注册账号</a> <span class="spliter">|</span> <a id='forgetPassword'>忘记密码</a>
 				</div>
 			</div>
 			<div class="mui-content-padded oauth-area">
-
+				<div class="oauth-btn" style="background-image: url(images/qq.png);"></div>
 			</div>
 		</div>
+		
 		<script src="js/mui.min.js"></script>
 		<script src="js/mui.enterfocus.js"></script>
 		<script src="js/app.js"></script>
@@ -248,8 +230,20 @@
 						},200);
 					}
 				};
+				var prepareTestUser = function() {
+					var users = JSON.parse(localStorage.getItem('$users') || '[]');
+					var dapeng = {
+						account: "dapeng",
+						password: "dapeng"
+					};
+					users.push(dapeng);
+					localStorage.setItem('$users', JSON.stringify(users));
+				}
 				$.plusReady(function() {
 					tryShowGuide();
+					
+					// TODO
+					prepareTestUser();
 					
 					plus.screen.lockOrientation("portrait-primary");
 					var settings = app.getSettings();
@@ -303,7 +297,7 @@
 									btn.setAttribute('class', 'oauth-btn' + (!isInstalled && service.id === 'weixin' ? (' disabled') : ''));
 									btn.authId = service.id;
 									btn.style.backgroundImage = 'url("images/' + service.id + '.png")'
-									oauthArea.appendChild(btn);
+//									oauthArea.appendChild(btn);
 								}
 							}
 							$(oauthArea).on('tap', '.oauth-btn', function() {

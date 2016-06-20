@@ -268,7 +268,8 @@
 					"images/sinaweibo.png",
 					"images/weixin.png",
 					"css/app.css",
-					"images/user-photo.png"
+					"images/user-photo.png",
+					"images/default-headimg1.png"
 				],
 				"refer": [
 					"unlock.html",

@@ -16,7 +16,8 @@
 			"js/mui.enterfocus.js",
 			"fonts/mui.ttf",
 			"css/app.css",
-			"images/user-photo.png"
+			"images/user-photo.png",
+			"images/default-headimg1.png"
 		],
 		"refer": [
 			"main.html",
@@ -37,7 +38,12 @@
 			"js/feedback-page.js",
 			"libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
 			"js/mui.view.js",
-			"js/app.js"
+			"js/app.js",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"login.html"
 		]
 	},
 	"html/tab-webview-main.html": {
