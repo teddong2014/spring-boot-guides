@@ -4,12 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<title></title>
 		<link href="css/mui.min.css" rel="stylesheet" />
 		<link href="css/style.css" rel="stylesheet" />
-		<link rel="stylesheet" type="text/css" href="css/app.css" />
 		<style>
 			.area {
 				margin: 20px auto 0px auto;
@@ -88,43 +85,43 @@
 				background-color: #ddd;
 			}
 		</style>
+
 	</head>
 
 	<body>
-		<div class="mui-content" >
-			<div style="height: 15%">
-				<div style="float: left;margin:10px"><span class="mui-icon mui-icon-compose"></span><a href="#" id="reg">注册账号</a></div>
-				<div style="float: right;margin:10px""><span class="mui-icon mui-icon-help"></span><a href="#" id='forgetPassword'>找回密码</a></div>
-			</div>
-			<div class="mui-input-row" id="login-headimg">
-				<a href="#"><img src="images/default-headimg1.png"/></a>
-			</div>
-			<div style="width: 80%;margin: 0 auto;padding: 0;">
-				<div class="mui-card" style="margin: 0;padding: 0;">
-					<form id='login-form' class="mui-input-group">
-						<div class="mui-input-row" style="height: 36px;">
-							<label><span class="mui-icon mui-icon-person" style="margin-top: -10px;"></span></label>
-							<input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入账号">
-						</div>
-						<div class="mui-input-row mui-password" style="height: 36px;">
-							<label><span class="mui-icon mui-icon-locked" style="margin-top: -10px;"></span></label>
-							<input id='password' type="password" class="mui-input-clear mui-input" placeholder="请输入密码">
-						</div>
-					</form>
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">登录</h1>
+		</header>
+		<div class="mui-content">
+			<form id='login-form' class="mui-input-group">
+				<div class="mui-input-row">
+					<label>账号</label>
+					<input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入账号">
 				</div>
-				<div class="mui-input-row mui-checkbox mui-left" style="float:right;margin: 5px;">
-				  <label><a href="#">自动登录</a></label>
-				  <input name="checkbox1" value="autoLogin" type="checkbox" id="autoLogin">
+				<div class="mui-input-row">
+					<label>密码</label>
+					<input id='password' type="password" class="mui-input-clear mui-input" placeholder="请输入密码">
 				</div>
-				<div class="mui-content-padded" style="margin: 0;padding: 0;">
-					<button id='login' class="mui-btn mui-btn-block mui-btn-primary" style="line-height: 0.8;">登录</button>
-					</div>
+			</form>
+			<form class="mui-input-group">
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell">
+						自动登录
+						<div id="autoLogin" class="mui-switch">
+							<div class="mui-switch-handle"></div>
+						</div>
+					</li>
+				</ul>
+			</form>
+			<div class="mui-content-padded">
+				<button id='login' class="mui-btn mui-btn-block mui-btn-primary">登录</button>
+				<div class="link-area"><a id='reg'>注册账号</a> <span class="spliter">|</span> <a id='forgetPassword'>忘记密码</a>
 				</div>
 			</div>
 			<div class="mui-content-padded oauth-area">
+
 			</div>
 		</div>
-		
 		<script src="js/mui.min.js"></script>
 		<script src="js/mui.enterfocus.js"></script>
 		<script src="js/app.js"></script>
@@ -133,124 +130,13 @@
 				$.init({
 					statusBarBackground: '#f7f7f7'
 				});
-				var templates = {};
-				var getTemplate = function(name, header, content) {
-					var template = templates[name];
-					if (!template) {
-						//预加载共用父模板；
-						var headerWebview = mui.preload({
-							url: header,
-							id: name + "-main",
-							styles: {
-								popGesture: "hide",
-							},
-							extras: {
-								mType: 'main'
-							}
-						});
-						//预加载共用子webview
-						var subWebview = mui.preload({
-							url: !content ? "" : content,
-							id: name + "-sub",
-							styles: {
-								top: '45px',
-								bottom: '0px',
-							},
-							extras: {
-								mType: 'sub'
-							}
-						});
-						subWebview.addEventListener('loaded', function() {
-							setTimeout(function() {
-								subWebview.show();
-							}, 50);
-						});
-						subWebview.hide();
-						headerWebview.append(subWebview);
-						//iOS平台支持侧滑关闭，父窗体侧滑隐藏后，同时需要隐藏子窗体；
-						if (mui.os.ios) { //5+父窗体隐藏，子窗体还可以看到？不符合逻辑吧？
-							headerWebview.addEventListener('hide', function() {
-								subWebview.hide("none");
-							});
-						}
-						templates[name] = template = {
-							name: name,
-							header: headerWebview,
-							content: subWebview,
-						};
-					}
-					return template;
-				};
-				var initTemplates = function() {
-					getTemplate('default', 'html/template.html');
-				};
-				//初始化，并预加载webview模式的选项卡			
-				function preload () {
-					mui.preload({
-						url:'html/tab-webview-main.html',
-						styles: {
-							popGesture: 'hide'
-						}
-					});
-				}
-				var	tryShowGuide = function() {
-					//读取本地存储，检查是否为首次启动
-					var showGuide = plus.storage.getItem("lauchFlag");
-					console.log("showGuide: " + showGuide);
-					if(showGuide){
-						console.log("will not show guide");
-						//有值，说明已经显示过了，无需显示；
-						//关闭splash页面；
-						plus.navigator.closeSplashscreen();
-						plus.navigator.setFullscreen(false);
-						//初始化模板
-						initTemplates(); 
-						//预加载
-						preload();
-					}else{
-						console.log("will show guide");
-						//显示启动导航
-						mui.openWindow({
-							id:'guide',
-							url:'html/guide.html',
-							show:{
-								aniShow:'none'
-							},
-							waiting:{
-								autoShow:false
-							}
-						});
-						//延迟的原因：优先打开启动导航页面，避免资源争夺
-						setTimeout(function () {
-							//初始化模板
-							initTemplates(); 
-							//预加载
-							preload();
-						},200);
-					}
-				};
-				var prepareTestUser = function() {
-					var users = JSON.parse(localStorage.getItem('$users') || '[]');
-					var dapeng = {
-						account: "dapeng",
-						password: "dapeng"
-					};
-					users.push(dapeng);
-					localStorage.setItem('$users', JSON.stringify(users));
-				}
 				$.plusReady(function() {
-					tryShowGuide();
-					
-					// TODO
-					prepareTestUser();
-					
 					plus.screen.lockOrientation("portrait-primary");
 					var settings = app.getSettings();
 					var state = app.getState();
 					var mainPage = $.preload({
 						"id": 'main',
-						"url": 'html/main.html'
-//						"url": 'html/tab-webview-main.html'
+						"url": 'main.html'
 					});
 					var toMain = function() {
 						$.fire(mainPage, 'show', null);
@@ -357,6 +243,8 @@
 					$.enterfocus('#login-form input', function() {
 						$.trigger(loginButton, 'tap');
 					});
+					console.log(settings);
+					console.log(settings.autoLogin);
 					autoLoginButton.classList[settings.autoLogin ? 'add' : 'remove']('mui-active')
 					autoLoginButton.addEventListener('toggle', function(event) {
 						setTimeout(function() {
