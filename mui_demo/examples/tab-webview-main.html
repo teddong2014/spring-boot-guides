@@ -76,6 +76,8 @@
 				if (targetTab == activeTab) {
 					return;
 				}
+				//隐藏当前;
+				plus.webview.hide(activeTab);
 				//更换标题
 				title.innerHTML = this.querySelector('.mui-tab-label').innerHTML;
 				//显示目标选项卡
@@ -89,8 +91,6 @@
 					mui.extend(aniShow,temp);
 					plus.webview.show(targetTab,"fade-in",300);
 				}
-				//隐藏当前;
-				plus.webview.hide(activeTab);
 				//更改当前活跃的选项卡
 				activeTab = targetTab;
 			});

@@ -270,7 +270,12 @@
 					"images/weixin.png",
 					"css/app.css",
 					"images/user-photo.png",
-					"images/default-headimg1.png"
+					"images/default-headimg1.png",
+					"images/login_bg.png",
+					"images/login_bg1.png",
+					"images/login_bg2.png",
+					"images/login_bg3.png",
+					"images/default-headimg3.png"
 				],
 				"refer": [
 					"unlock.html",
@@ -289,13 +294,17 @@
 					"fonts/mui.ttf",
 					"html/tab-webview-subpage-about.html",
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"html/tab-webview-subpage-chat.html",
+					"html/tab-webview-subpage-home.html",
+					"js/app.js"
 				],
 				"refer": [
 					"html/tab-webview-subpage-setting.html",
-					"html/tab-webview-subpage-chat.html",
 					"html/tab-webview-subpage-contact.html",
-					"html/setting.html"
+					"html/setting.html",
+					"html/tab-webview-subpage-me.html",
+					"html/tab-webview-subpage-news.html"
 				],
 				"priority": 0
 			},
@@ -316,7 +325,9 @@
 			},
 			"html/tab-webview-subpage-chat.html": {
 				"resources": [
-					"fonts/mui.ttf"
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -345,7 +356,9 @@
 					"fonts/mui.ttf",
 					"css/mui.min.css"
 				],
-				"refer": [],
+				"refer": [
+					"login.html"
+				],
 				"priority": 0
 			},
 			"html/main.html": {
@@ -354,21 +367,64 @@
 					"js/mui.min.js",
 					"fonts/mui.ttf",
 					"css/mui.min.css",
-					"html/tab-webview-subpage-about.html"
+					"html/tab-webview-subpage-about.html",
+					"html/tab-webview-subpage-home.html"
 				],
 				"refer": [
 					"html/setting.html",
 					"html/tab-webview-subpage-chat.html",
 					"html/tab-webview-subpage-contact.html",
-					"html/tab-webview-subpage-setting.html"
+					"html/tab-webview-subpage-setting.html",
+					"html/tab-webview-subpage-me.html",
+					"html/tab-webview-subpage-news.html"
 				],
+				"priority": 0
+			},
+			"html/tab-webview-subpage-home.html": {
+				"resources": [
+					"images/firm1.jpg",
+					"images/yuantiao.jpg",
+					"images/firm4.jpg",
+					"images/firm2.jpg",
+					"images/firm3.jpg",
+					"firmInfo/firm1.html",
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/tab-webview-subpage-news.html": {
+				"resources": [
+					"css/app.css",
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"firmInfo/firm1.html": {
+				"resources": [
+					"fonts/mui.ttf"
+				],
+				"refer": [],
 				"priority": 0
 			}
 		},
 		"idle": {
 			"resources": [
-				"js/service.js",
+				"images/cbd.jpg",
+				"css/mui.listpicker.css",
 				"libs/easymob-webim-sdk/quickstart.md",
+				"css/mui.picker.css",
+				"css/mui.indexedlist.css",
+				"images/homePic.jpg",
+				"images/default-headimg.png",
+				"css/mui.dtpicker.css",
+				"css/mui.picker.all.css",
+				"css/mui.imageviewer.css",
+				"css/mui.picker.min.css",
+				"css/mui.poppicker.css",
 				"README.md"
 			]
 		}
