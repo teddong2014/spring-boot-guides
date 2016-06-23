@@ -7,120 +7,124 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
 		<link rel="stylesheet" href="../css/mui.min.css">
 		<style>
-			html,
-			body {
+			html,body {
 				background-color: #efeff4;
 			}
-			.title {
-				padding: 20px 15px 10px;
+			.title{
+				margin: 20px 15px 10px;
 				color: #6d6d72;
 				font-size: 15px;
-				background-color: #fff;
+				text-align: center;
+			}
+			 .oa-contact-cell.mui-table .mui-table-cell {
+				padding: 11px 0;
+				vertical-align: middle;
+			}
+			
+			.oa-contact-cell {
+				position: relative;
+				margin: -11px 0;
+			}
+	
+			.oa-contact-avatar {
+				width: 75px;
+			}
+			.oa-contact-avatar img {
+				border-radius: 50%;
+			}
+			.oa-contact-content {
+				width: 100%;
+			}
+			.oa-contact-name {
+				margin-right: 20px;
+			}
+			.oa-contact-name, oa-contact-position {
+				float: left;
 			}
 		</style>
 	</head>
 
 	<body>
-		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
-			<div class="mui-scroll">
-				<div class="title">
-					这是webview模式选项卡中的第2个子页面，该页面展示一个支持下拉刷新、上拉加载的消息列表
-				</div>
-				<ul class="mui-table-view mui-table-view-chevron">
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 1</a>
-					</li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 2</a>
-					</li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 3</a>
-					</li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 4</a>
-					</li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 5</a>
-					</li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 6</a>
-					</li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 7</a>
-					</li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 8</a>
-					</li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 9</a>
-					</li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 10</a>
-					</li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 11</a>
-					</li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 12</a>
-					</li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 13</a>
-					</li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 14</a>
-					</li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 15</a>
-					</li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 16</a>
-					</li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 17</a>
-					</li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 18</a>
-					</li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 19</a>
-					</li>
-					<li class="mui-table-view-cell"><a href="" class="mui-navigate-right">Item 20</a>
-					</li>
-				</ul>
-			</div>
+		<div class="mui-content">
+			<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-cell">
+						<div class="oa-contact-cell mui-table">
+							<div class="oa-contact-avatar mui-table-cell">
+								<img src="../images/looking-eye.png" />
+							</div>
+							<div class="oa-contact-content mui-table-cell">
+								<div class="mui-clearfix">
+									<h4 class="oa-contact-name">谁看过我</h4>
+								</div>
+								<p class="oa-contact-email mui-h6">
+									暂无新消息
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-cell">
+						<div class="oa-contact-cell mui-table">
+							<div class="oa-contact-avatar mui-table-cell">
+								<img src="../images/apply.png" />
+							</div>
+							<div class="oa-contact-content mui-table-cell">
+								<div class="mui-clearfix">
+									<h4 class="oa-contact-name">投递状态通知</h4>
+								</div>
+								<p class="oa-contact-email mui-h6">
+									暂无新消息
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-cell">
+						<div class="oa-contact-cell mui-table">
+							<div class="oa-contact-avatar mui-table-cell">
+								<img src="../images/interview.png" />
+							</div>
+							<div class="oa-contact-content mui-table-cell">
+								<div class="mui-clearfix">
+									<h4 class="oa-contact-name">面试状态通知</h4>
+								</div>
+								<p class="oa-contact-email mui-h6">
+									暂无新消息
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-cell">
+						<div class="oa-contact-cell mui-table">
+							<div class="oa-contact-avatar mui-table-cell">
+								<img src="../images/hired.png" />
+							</div>
+							<div class="oa-contact-content mui-table-cell">
+								<div class="mui-clearfix">
+									<h4 class="oa-contact-name">职位录用通知</h4>
+								</div>
+								<p class="oa-contact-email mui-h6">
+									暂无新消息
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
 		</div>
-		<script src="../js/mui.min.js"></script>
-		<script>
-			mui.init({
-				swipeBack: false,
-				pullRefresh: {
-					container: '#pullrefresh',
-					down: {
-						callback: pulldownRefresh
-					},
-					up: {
-						contentrefresh: '正在加载...',
-						callback: pullupRefresh
-					}
-				}
-			});
-			/**
-			 * 下拉刷新具体业务实现
-			 */
-			function pulldownRefresh() {
-				setTimeout(function() {
-					var table = document.body.querySelector('.mui-table-view');
-					var cells = document.body.querySelectorAll('.mui-table-view-cell');
-					for (var i = cells.length, len = i + 3; i < len; i++) {
-						var li = document.createElement('li');
-						li.className = 'mui-table-view-cell';
-						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
-						//下拉刷新，新纪录插到最前面；
-						table.insertBefore(li, table.firstChild);
-					}
-					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
-				}, 1000);
-			}
-			var count = 0;
-			/**
-			 * 上拉加载具体业务实现
-			 */
-			function pullupRefresh() {
-				setTimeout(function() {
-					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
-					var table = document.body.querySelector('.mui-table-view');
-					var cells = document.body.querySelectorAll('.mui-table-view-cell');
-					for (var i = cells.length, len = i + 20; i < len; i++) {
-						var li = document.createElement('li');
-						li.className = 'mui-table-view-cell';
-						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
-						table.appendChild(li);
-					}
-				}, 1000);
-			}
-		</script>
 	</body>
+	<script src="../js/mui.min.js"></script>
+	<script>
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+	</script>
 </html>
