@@ -1,0 +1,43 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+jar {
+    baseName = 'word-convert-2-excel'
+    version =  '0.1.0'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile("org.apache.poi:poi:3.14")
+    compile("org.apache.poi:poi-scratchpad:3.14")
+    compile("org.apache.poi:poi-ooxml:3.14")
+    compile("org.apache.poi:poi-ooxml-schemas:3.14")
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+        resources {
+        	srcDir 'resources'
+        }
+    }
+}

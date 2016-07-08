@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" exported="true"/>
+	<classpathentry kind="output" path="bin"/>
+	<classpathentry sourcepath="C:/Users/Administrator/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi/3.14/5cf7a94c492c51ed82cf32c44cb63494d353a048/poi-3.14-sources.jar" kind="lib" path="C:/Users/Administrator/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi/3.14/fad7ae6d2e59c59ffdb45f1981500babfa765180/poi-3.14.jar" exported="true"/>
+	<classpathentry sourcepath="C:/Users/Administrator/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi-scratchpad/3.14/8dafd273c19ba902f9a2c19216f271a1c9ac7188/poi-scratchpad-3.14-sources.jar" kind="lib" path="C:/Users/Administrator/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi-scratchpad/3.14/3c775b327fd4d451b6fa8d6111197a2d33d1dc00/poi-scratchpad-3.14.jar" exported="true"/>
+	<classpathentry sourcepath="C:/Users/Administrator/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi-ooxml/3.14/736eeb639587c8efa620d5f10fd6fee53ad1996f/poi-ooxml-3.14-sources.jar" kind="lib" path="C:/Users/Administrator/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi-ooxml/3.14/911b3a5562b5dc4c5156d2d5f0f68a83346100d0/poi-ooxml-3.14.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/Administrator/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi-ooxml-schemas/3.14/97fe4bfdef7f103bfd9ec63c98ea90469afeec7b/poi-ooxml-schemas-3.14.jar" exported="true"/>
+	<classpathentry sourcepath="C:/Users/Administrator/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.10/11fb3d88ae7e3b757d70237064210ceb954a5a04/commons-codec-1.10-sources.jar" kind="lib" path="C:/Users/Administrator/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.10/4b95f4897fa13f2cd904aee711aeafc0c5295cd8/commons-codec-1.10.jar" exported="true"/>
+	<classpathentry sourcepath="C:/Users/Administrator/.gradle/caches/modules-2/files-2.1/com.github.virtuald/curvesapi/1.03/ae647720b4094f3e6fefea06144b89ebdacff390/curvesapi-1.03-sources.jar" kind="lib" path="C:/Users/Administrator/.gradle/caches/modules-2/files-2.1/com.github.virtuald/curvesapi/1.03/6b0977602901464b056959027fdf2396050f9dd2/curvesapi-1.03.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/Administrator/.gradle/caches/modules-2/files-2.1/org.apache.xmlbeans/xmlbeans/2.6.0/29e80d2dd51f9dcdef8f9ffaee0d4dc1c9bbfc87/xmlbeans-2.6.0.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/Administrator/.gradle/caches/modules-2/files-2.1/stax/stax-api/1.0.1/49c100caf72d658aca8e58bd74a4ba90fa2b0d70/stax-api-1.0.1.jar" exported="true"/>
+</classpath>

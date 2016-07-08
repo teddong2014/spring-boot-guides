@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+	</head>
+
+	<body>
+		
+		<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+		    <div class="mui-scroll">
+		        <a class="mui-control-item mui-active">
+		            推荐
+		        </a>
+		        <a class="mui-control-item">
+		          热点
+		        </a>
+		        <a class="mui-control-item">
+		           北京
+		        </a>
+		        <a class="mui-control-item">
+		           社会
+		        </a>
+		        <a class="mui-control-item">
+		           娱乐
+		        </a>
+		        <a class="mui-control-item">
+		           科技
+		        </a>
+		    </div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.picker.min.js"></script>
+		<script type="text/javascript">
+			(function($){mui.init(function() {
+				subpages:[{
+      url:'subpage.html',
+      id:'subpage.html',
+      styles:{
+        top:'100px',//mui标题栏默认高度为45px；
+        bottom:'0px'//默认为0px，可不定义；
+      }
+    }]
+			});
+			var changeBack = function() {
+					// 自定义返回操作
+					$.oldBack = mui.back;
+					var backButtonPress = 0;
+					$.back = function(event) {
+						backButtonPress++;
+						if (backButtonPress > 1) {
+							plus.runtime.quit();
+						} else {
+							plus.nativeUI.toast('再按一次退出应用');
+						}
+						setTimeout(function() {
+							backButtonPress = 0;
+						}, 1000);
+						return false;
+					};
+				};
+			mui.plusReady(function () {
+				changeBack();
+			    plus.webview.create('subpage.html', 'subpage.html', {top: '45px', bottom: '0px'});
+			    plus.webview.show('subpage.html');
+			    
+			});})(mui)
+		</script>
+	</body>
+
+</html>

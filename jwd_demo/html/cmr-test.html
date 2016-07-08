@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+	<script type="text/javascript">
+				var btnClick = function () {
+					var cmr = plus.camera.getCamera();
+	var res = cmr.supportedImageResolutions[0];
+	var fmt = cmr.supportedImageFormats[0];
+	console.log("Resolution: "+res+", Format: "+fmt);
+	cmr.captureImage( function( path ){
+			alert( "Capture image success: " + path );  
+		},
+		function( error ) {
+			alert( "Capture image failed: " + error.message );
+		},
+		{resolution:res,format:fmt}
+	);
+				};
+		</script>
+	<body>
+		<button id="cmr" type="button" class="mui-btn mui-btn-green mui-btn-block" onclick="btnClick()">按钮</button>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function () {
+			});
+		</script>
+	</body>
+
+</html>

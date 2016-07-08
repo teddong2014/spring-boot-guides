@@ -1,0 +1,351 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css"/>
+		<style type="text/css">
+			/*点击变蓝色高亮*/
+.mui-table-view-cell .mui-active{
+	background-color: #0062CC;
+}
+.mui-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 998;
+	background-color: rgba(0,0,0,3);
+}
+		</style>
+	</head>
+
+	<body>
+		<ul class="mui-table-view">
+		    <li class="mui-table-view-cell mui-collapse mui-active">
+		        <a class="mui-navigate-right" href="#">面板1</a>
+		        <div class="mui-collapse-content">
+		            <p>面板1子内容</p>
+		        </div>
+		    </li>
+		    <li class="mui-table-view-cell mui-collapse">
+		        <a class="mui-navigate-right" href="#">面板2</a>
+		            <div class="mui-collapse-content">
+		            <p>面板2子内容</p>
+		        </div>
+		    </li>
+		    <li class="mui-table-view-cell mui-collapse">
+		        <a class="mui-navigate-right" href="#">面板3</a>
+		        <div class="mui-collapse-content">
+		            <p>面板3子内容</p>
+		        </div>
+		    </li>
+		</ul>
+		<div id="sheet" class="mui-popover mui-popover-bottom mui-popover-action ">
+		    <!-- 可选择菜单 -->
+		    <ul class="mui-table-view">
+		      <li class="mui-table-view-cell">
+		        <a href="#">菜单1</a>
+		      </li>
+		      <li class="mui-table-view-cell">
+		        <a href="#">菜单2</a>
+		      </li>
+		    </ul>
+		    <!-- 取消菜单 -->
+		    <ul class="mui-table-view">
+		      <li class="mui-table-view-cell">
+		        <a href="#sheet"><b>取消</b></a>
+		      </li>
+		    </ul>
+		</div>
+		<a href="#sheet" id="openSheet" class="mui-btn mui-btn-primary mui-btn-block">打开操作表</a>
+		<span class="mui-badge mui-badege-primary">1123123</span>
+		<span class="mui-badge mui-badge-inverted mui-btn-blue">2123123</span>
+		<button type="button" class="mui-btn mui-btn-blue mui-btn-block" id="block_btn">按钮</button>
+		<button type="button" class="mui-btn mui-btn-blue">按钮</button>
+		<button type="button" class="mui-btn mui-btn-blue mui-btn-outlined">按钮</button>
+		<div class="mui-input-row mui-checkbox mui-left">
+		    <label>Checkbox</label>
+		    <input name="Checkbox" type="checkbox" disabled="true">
+		</div>
+		<div id="slider" class="mui-slider" >
+		  <div class="mui-slider-group mui-slider-loop">
+		    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+		    <div class="mui-slider-item mui-slider-item-duplicate">
+		      <a href="#">
+		        <img src="http://placehold.it/400x300">
+		      </a>
+		    </div>
+		    <!-- 第一张 -->
+		    <div class="mui-slider-item">
+		      <a href="#">
+		        <img src="http://placehold.it/400x300">
+		      </a>
+		    </div>
+		    <!-- 第二张 -->
+		    <div class="mui-slider-item">
+		      <a href="#">
+		        <img src="http://placehold.it/400x300">
+		      </a>
+		    </div>
+		    <!-- 第三张 -->
+		    <div class="mui-slider-item">
+		      <a href="#">
+		        <img src="http://placehold.it/400x300">
+		      </a>
+		    </div>
+		    <!-- 第四张 -->
+		    <div class="mui-slider-item">
+		      <a href="#">
+		        <img src="http://placehold.it/400x300">
+		      </a>
+		    </div>
+		    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+		    <div class="mui-slider-item mui-slider-item-duplicate">
+		      <a href="#">
+		        <img src="http://placehold.it/400x300">
+		      </a>
+		    </div>
+		  </div>
+		  <div class="mui-slider-indicator">
+		    <div class="mui-indicator mui-active"></div>
+		    <div class="mui-indicator"></div>
+		    <div class="mui-indicator"></div>
+		    <div class="mui-indicator"></div>
+		  </div>
+		</div>
+		<ul class="mui-table-view mui-grid-view">
+		    <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		        <a href="#">
+		            <img class="mui-media-object" src="http://placehold.it/400x300">
+		            <div class="mui-media-body">文字说明1</div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		        <a href="#">
+		            <img class="mui-media-object" src="http://placehold.it/400x300">
+		            <div class="mui-media-body">文字说明2</div>
+		        </a>
+		    </li>
+		</ul>
+		<div class="mui-input-row">
+		    <label>Input</label>
+		    <input type="text" placeholder="普通输入框">
+		</div>
+		<div class="mui-input-row">
+		    <label>Input</label>
+		    <input type="text" class="mui-input-password mui-input-clear" placeholder="带清除按钮的输入框">
+		</div>
+		<div class="mui-input-row mui-search">
+		    <input type="search" class="mui-input-clear" placeholder="">
+		</div>
+		<div class="mui-input-row">
+		    <label>Input</label>
+		    <input type="text" class="mui-input-speech mui-input-clear" placeholder="语音输入">
+		</div>
+		<span class="mui-icon mui-icon-bars">123123</span>
+		<ul class="mui-table-view">
+		        <li class="mui-table-view-cell">
+		                Item 1
+		        </li>
+		        <li class="mui-table-view-cell">
+		                 Item 2
+		        </li>
+		        <li class="mui-table-view-cell">
+		                 Item 3
+		        </li>
+		    </ul>
+		<ul class="mui-table-view">
+	        <li class="mui-table-view-cell">
+	            <a class="mui-navigate-right">
+	                Item 1
+	            </a>
+	        </li>
+	        <li class="mui-table-view-cell">
+	            <a class="mui-navigate-right">
+	                 Item 2
+	            </a>
+	        </li>
+	        <li class="mui-table-view-cell">
+	            <a class="mui-navigate-right">
+	                 Item 3
+	            </a>
+	        </li>
+	    </ul>
+	    <ul class="mui-table-view">
+	        <li class="mui-table-view-cell">Item 1
+	                <span class="mui-badge mui-badge-blue">1</span>
+	        </li>
+	        <li class="mui-table-view-cell">Item 2
+	                 <span class="mui-badge mui-badge-blue">1</span>
+	        </li>
+	        <li class="mui-table-view-cell">Item 3
+	                 <span class="mui-badge mui-badge-blue">3</span>
+	        </li>
+	    </ul>
+	    <ul class="mui-table-view">
+	        <li class="mui-table-view-cell mui-media">
+	            <a href="javascript:;">
+	                <img class="mui-media-object mui-pull-right" src="http://placehold.it/40x30">
+	                <div class="mui-media-body">
+	                    幸福
+	                    <p class="mui-ellipsis">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+	                </div>
+	            </a>
+	        </li>
+	        <li class="mui-table-view-cell mui-media">
+	            <a href="javascript:;">
+	                <img class="mui-media-object mui-pull-right" src="http://placehold.it/40x30">
+	                <div class="mui-media-body">
+	                    木屋
+	                    <p class="mui-ellipsis">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+	                </div>
+	            </a>
+	        </li>
+	        <li class="mui-table-view-cell mui-media">
+	            <a href="javascript:;">
+	                <img class="mui-media-object mui-pull-right" src="http://placehold.it/40x30">
+	                <div class="mui-media-body">
+	                    CBD
+	                    <p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+	                </div>
+	            </a>
+	        </li>
+	    </ul>
+	    <ul class="mui-table-view">
+	        <li class="mui-table-view-cell mui-media">
+	            <a href="javascript:;">
+	                <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+	                <div class="mui-media-body">
+	                    幸福
+	                    <p class="mui-ellipsis">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+	                </div>
+	            </a>
+	        </li>
+	        <li class="mui-table-view-cell mui-media">
+	            <a href="javascript:;">
+	                <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+	                <div class="mui-media-body">
+	                    木屋
+	                    <p class="mui-ellipsis">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+	                </div>
+	            </a>
+	        </li>
+	        <li class="mui-table-view-cell mui-media">
+	            <a href="javascript:;">
+	                <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+	                <div class="mui-media-body">
+	                    CBD
+	                    <p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+	                </div>
+	            </a>
+	        </li>
+	    </ul>
+	    
+	    <div class="mui-numbox" data-numbox-step='5' data-numbox-min='0' data-numbox-max='20'>
+	        <button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+	        <input class="mui-input-numbox" type="number" />
+	        <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+	    </div>
+	    <style type="text/css">
+	    #popover{
+	    	height: 100px;
+	    	width:200px;
+	    }
+	    </style>
+	    <div id="popover" class="mui-popover">
+	    	<div class="mui-scroll-wrapper">
+	    	    <div class="mui-scroll">
+	    		    <ul class="mui-table-view">
+	    		    	<li class="mui-table-view-cell"><a href="#">Item1</a></li>
+	    		    	<li class="mui-table-view-cell"><a href="#">Item2</a></li>
+	    		    	<li class="mui-table-view-cell"><a href="#">Item3</a></li>
+	    		    	<li class="mui-table-view-cell"><a href="#">Item4</a></li>
+	    		    	<li class="mui-table-view-cell"><a href="#">Item5</a></li>
+	    		    </ul>
+	    		</div>
+	    	</div>
+	    </div>
+	    <a href="#popover" id="openPopover" class="mui-btn mui-btn-primary mui-btn-block">打开弹出菜单</a>
+	    <div id="demo1" class="mui-text-center">
+					<h5>动态设置进度条进度</h5>
+					<p class="mui-progressbar mui-progressbar-in" data-progress="20"><span></span></p>
+					<ul id="progressbarBtn1" class="mui-pagination">
+						<li><a href="javascript:;" data-progress="10">10%</a></li>
+						<li><a href="javascript:;" data-progress="30">30%</a></li>
+						<li><a href="javascript:;" data-progress="50">50%</a></li>
+						<li><a href="javascript:;" data-progress="100">100%</a></li>
+					</ul>
+				</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.picker.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function () {
+				mui('#sheet').on('toggle');
+//				mui('#sheet').popover('toggle');
+//				mui.alert("message", "title", "btnValue", function () {
+//					console.log("mui alert");
+//				});
+//				mui.confirm("message", "title", "btnValue", function () {
+//					console.log("mui confirm");
+//				})
+//				mui.prompt("说明", "默认输入", "标题", ["a1"], function () {
+//					console.log("mui prompt");
+//				});
+//				mui.prompt("说明", "默认输入", "标题", ["a1"], function () {
+//					console.log("mui prompt");
+//				}, 'div');
+//				document.querySelector('.mui-popup-input input').type='password';
+//				mui.toast("message");
+//				mui.closePopup();
+//				var gallery = mui('.mui-slider');
+//				gallery.slider({
+//					interval: 0
+//				});
+//				
+//				gallery.slider().gotoItem(3);
+//				var mask = mui.createMask(function () {
+//					console.log("create mask");
+//				});
+//				mask.show();
+//				mui('.mui-popover').popover('toggle',document.getElementById("openPopover"));
+//				var picker = new mui.PopPicker({
+//					layer: 1,
+//					button : ['ok']
+//				});
+//				picker.setData([{value:'zz',text:'侄子'}, {value:'zz',text:'侄子'}]);
+//				picker.show(function (selectedItems) {
+//					console.log(selectedItems[0].text);
+//					console.log(selectedItems[0].value);
+//				});
+//				var dtPicker = new mui.DtPicker({
+//					type: "datetime",
+//					beginDate: new Date(2015,04,25),
+//					endDate: new Date(2015,05,01),
+//					labels: ['Year','Mon','Day','Hour','min'],
+//					customData: {
+//						h: [{
+//							value: 'AM',
+//							"text": 'AM'
+//						},{
+//							value: 'PM',
+//							"text": 'PM'
+//						}
+//						]
+//					}
+//				});
+//				dtPicker.show(function (e) {
+//					console.log(e);
+//				});
+				var progressbar1 = mui('#demo1');
+				progressbar1.
+			});
+		</script>
+	</body>
+
+</html>

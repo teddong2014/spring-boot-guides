@@ -1,0 +1,36 @@
+{
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf",
+			"js/mui.picker.min.js",
+			"css/mui.picker.min.css",
+			"subpage.html"
+		],
+		"refer": [
+			"subpage.html"
+		]
+	},
+	"subpage.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"js/mui.picker.min.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/mui.picker.min.css"
+		],
+		"refer": [
+			"openpage.html"
+		]
+	},
+	"openpage.html": {
+		"resources": [
+			"js/mui.picker.min.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/mui.picker.min.css"
+		]
+	}
+}

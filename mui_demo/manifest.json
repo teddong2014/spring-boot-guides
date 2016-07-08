@@ -159,11 +159,10 @@
 					"fonts/mui.ttf",
 					"css/mui.min.css",
 					"js/update.js",
-					"list.html"
-				],
-				"refer": [
+					"list.html",
 					"index-menu.html"
 				],
+				"refer": [],
 				"priority": 0
 			},
 			"examples/tab-webview-subpage-contact.html": {

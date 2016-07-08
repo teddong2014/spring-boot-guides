@@ -5,7 +5,8 @@
 			"fonts/mui.ttf",
 			"css/mui.min.css",
 			"js/update.js",
-			"list.html"
+			"list.html",
+			"index-menu.html"
 		],
 		"refer": [
 			"index-menu.html",
@@ -36,7 +37,10 @@
 			"examples/template.html",
 			"examples/tab-webview-main.html",
 			"examples/pullrefresh_main.html",
-			"examples/guide.html"
+			"examples/guide.html",
+			"examples/accordion.html",
+			"examples/ajax.html",
+			"examples/info.html"
 		]
 	},
 	"examples/pullrefresh_main.html": {
@@ -45,6 +49,26 @@
 		],
 		"refer": [
 			"examples/pullrefresh_sub.html"
+		]
+	},
+	"examples/accordion.html": {
+		"resources": [
+			"images/cbd.jpg",
+			"images/muwu.jpg",
+			"images/yuantiao.jpg",
+			"css/app.css",
+			"images/shuijiao.jpg"
+		]
+	},
+	"examples/ajax.html": {
+		"resources": [
+			"css/app.css"
+		]
+	},
+	"examples/info.html": {
+		"resources": [
+			"images/qrcode.png",
+			"css/app.css"
 		]
 	}
 }

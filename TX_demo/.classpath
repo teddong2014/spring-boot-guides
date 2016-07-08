@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/Users/Administrator/Downloads/TLS后台API/20151230/tls_sig_api-windows-64/java_native/lib/bcpkix-jdk15on-152.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Administrator/Downloads/TLS后台API/20151230/tls_sig_api-windows-64/java_native/lib/bcprov-jdk15on-152.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Administrator/Downloads/TLS后台API/20151230/tls_sig_api-windows-64/java_native/lib/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Administrator/Downloads/TLS后台API/20151230/tls_sig_api-windows-64/java_native/lib/gson-2.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Administrator/Downloads/TLS后台API/20151230/tls_sig_api-windows-64/java_native/lib/json.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Administrator/Downloads/TLS后台API/20151230/tls_sig_api-windows-64/java_native/lib/tls_sig_api.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

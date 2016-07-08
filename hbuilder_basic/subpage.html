@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+	</head>
+
+	<body>
+		
+		<div class="mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<!--这里放置真实显示的DOM内容-->
+				<div id="demo1" class="mui-text-center">
+			<h5>动态设置进度条进度</h5>
+			<p class="mui-progressbar mui-progressbar-in" data-progress="20"><span></span></p>
+			<ul id="progressbarBtn1" class="mui-pagination">
+				<li><a href="javascript:;" data-progress="10">10%</a></li>
+				<li><a href="javascript:;" data-progress="30">30%</a></li>
+				<li><a href="javascript:;" data-progress="50">50%</a></li>
+				<li><a href="javascript:;" data-progress="100">100%</a></li>
+			</ul>
+		</div>
+		<div class="mui-progressbar">
+			<span></span>
+		</div>
+		<div class="mui-input-row mui-radio ">
+			<label>Radio</label>
+			<input name="radio" type="radio" checked>
+		</div>
+		<div class="mui-input-row mui-radio mui-left">
+			<label>Radio</label>
+			<input name="radio" type="radio" checked>
+		</div>
+		<div class="mui-input-row mui-radio mui-disabled">
+			<label>Radio</label>
+			<input name="radio" type="radio" disabled="disabled">
+		</div>
+		<ul class="mui-table-view mui-table-view-radio">
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">Item 1</a>
+			</li>
+			<li class="mui-table-view-cell mui-selected">
+				<a class="mui-navigate-right">Item 2</a>
+			</li>
+		</ul>
+		<div class="mui-input-row mui-input-range">
+			<label>Range</label>
+			<input type="range" min="0" max="100" value="50">
+		</div>
+		<div class="mui-slider">
+		  <div class="mui-slider-group">
+		    <!--第一个内容区容器-->
+		    <div class="mui-slider-item">
+		      <!-- 具体内容 -->
+		      第一张的内容
+		    </div>
+		    <!--第二个内容区-->
+		    <div id="item2" class="mui-slider-item">
+		      <!-- 具体内容 -->
+		    </div>
+		    <div id="item3" class="mui-slider-item">
+		      <!-- 具体内容 -->
+		    </div>
+		  </div>
+		</div>
+		<div id="info">abc</div>
+		<div class="mui-input-row">
+		    <label>Switch</label>
+		    <div class="mui-switch mui-active mui-switch-blue">
+		        <div class="mui-switch-handle"></div>
+		    </div>
+		</div>
+		<div class="mui-input-row">
+		    <label>Switch</label>
+		    <div class="mui-switch mui-active">
+		        <div class="mui-switch-handle"></div>
+		    </div>
+		</div>
+		<div class="mui-switch mui-switch-mini mui-active mui-switch-blue">
+		  <div class="mui-switch-handle"></div>
+		</div>
+		<div class="mui-switch mui-switch-mini mui-active" id="mySwitch">
+		  <div class="mui-switch-handle"></div>
+		</div>
+		<button type="button" class="mui-btn mui-btn-blue mui-btn-block" id="openPageBtn">打开页面</button>
+			</div>
+		
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.picker.min.js"></script>
+		<script type="text/javascript">
+			mui.init({});
+			mui.plusReady(function() {
+//				mui(".mui-progressbar").progressbar().show();
+//				mui('.mui-scroll-wrapper').scroll({
+//					scrollY: true, //是否竖向滚动
+//					scrollX: false, //是否横向滚动
+//					startX: 0, //初始化时滚动至x
+//					startY: 0, //初始化时滚动至y
+//					indicators: true, //是否显示滚动条
+//					deceleration: 0.0006, //阻尼系数,系数越小滑动越灵敏
+//					bounce: true //是否启用回弹
+//				}).scrollToBottom();
+//				
+//				var item2Show = false,item3Show = false;//子选项卡是否显示标志
+//				document.querySelector('.mui-slider').addEventListener('slide', function(event) {
+//					console.log("slide");
+//				  if (event.detail.slideNumber === 1&&!item2Show) {
+//				    //切换到第二个选项卡
+//				    //根据具体业务，动态获得第二个选项卡内容；
+//				    var content = "正在显示第二张";
+//				    //显示内容
+//				    document.getElementById("item2").innerHTML = content;
+//				    //改变标志位，下次直接显示
+//				    item2Show = true;
+//				  } else if (event.detail.slideNumber === 2&&!item3Show) {
+//				    //切换到第三个选项卡
+//				    //根据具体业务，动态获得第三个选项卡内容；
+//				    var content = "正在显示第三张";
+//				    //显示内容
+//				    document.getElementById("item3").innerHTML = content;
+//				    //改变标志位，下次直接显示
+//				    item3Show = true;
+//				  }
+//				});
+//				
+//				document.getElementById("mySwitch").addEventListener("toggle",function(event){
+//				  if(event.detail.isActive){
+//				    console.log("你启动了开关");
+//				  }else{
+//				    console.log("你关闭了开关");  
+//				  }
+//				});
+				var openPageBtn = document.getElementById("openPageBtn");
+				console.log(openPageBtn);
+				openPageBtn.addEventListener('tap', function () {
+					console.log("openPage tap");
+					mui.openWindow({
+					    url:'openpage.html',
+					    id:'openpage.html',
+					    styles:{
+//					      top:newpage-top-position,//新页面顶部位置
+//					      bottom:newage-bottom-position,//新页面底部位置
+//					      width:newpage-width,//新页面宽度，默认为100%
+//					      height:newpage-height,//新页面高度，默认为100%
+					    },
+					    extras:{
+					      //自定义扩展参数，可以用来处理页面间传值
+					      name: 'mui'
+					    },
+					    createNew:false,//是否重复创建同样id的webview，默认为false:不重复创建，直接显示
+					    show:{
+					      autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      aniShow: 'slide-in-right',//页面显示动画，默认为”slide-in-right“；
+//					      duration:'300'//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					    },
+					    waiting:{
+					      autoShow:true,//自动显示等待框，默认为true
+					      title:'客官稍等，小二上菜中...',//等待对话框上显示的提示内容
+					      options:{
+//					        width:waiting-dialog-widht,//等待框背景区域宽度，默认根据内容自动计算合适宽度
+//					        height:waiting-dialog-height,//等待框背景区域高度，默认根据内容自动计算合适高度
+					      }
+					    }
+					})
+				})
+			});
+		</script>
+	</body>
+
+</html>

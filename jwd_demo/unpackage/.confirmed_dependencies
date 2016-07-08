@@ -1,188 +1,188 @@
 {
-	"main.html": {
-		"refer": [
-			"setting.html",
-			"html/setting.html"
-		],
-		"resources": [
-			"js/app.js",
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"fonts/mui.ttf"
-		]
-	},
-	"login.html": {
-		"resources": [
-			"js/app.js",
-			"js/mui.min.js",
-			"images/sinaweibo.png",
-			"css/mui.min.css",
-			"css/style.css",
-			"images/weixin.png",
-			"images/qq.png",
-			"js/mui.enterfocus.js",
-			"fonts/mui.ttf",
-			"css/app.css",
-			"images/user-photo.png",
-			"images/default-headimg1.png",
-			"images/login_bg.png",
-			"images/login_bg1.png",
-			"images/login_bg2.png",
-			"images/login_bg3.png",
-			"images/default-headimg3.png"
-		],
-		"refer": [
-			"main.html",
-			"html/tab-webview-main.html",
-			"html/template.html",
-			"html/guide.html",
-			"forget_password.html",
-			"reg.html",
-			"html/main.html",
-			"unlock.html"
-		]
-	},
-	"setting.html": {
-		"resources": [
-			"libs/easymob-webim-sdk/easemob.im-1.0.5.js",
-			"fonts/mui.ttf",
-			"libs/easymob-webim-sdk/json2.js",
-			"libs/easymob-webim-sdk/jquery-1.11.1.js",
-			"js/mui.locker.js",
-			"js/feedback.js",
-			"css/feedback-page.css",
-			"js/feedback-page.js",
-			"libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
-			"js/mui.view.js",
-			"js/app.js",
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"images/iconfont-tianjia.png"
-		],
-		"refer": [
-			"login.html"
-		]
-	},
-	"html/tab-webview-main.html": {
-		"resources": [
-			"fonts/mui.ttf",
-			"html/tab-webview-subpage-about.html",
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"html/tab-webview-subpage-chat.html",
-			"html/tab-webview-subpage-home.html",
-			"js/app.js"
-		],
-		"refer": [
-			"html/tab-webview-subpage-setting.html",
-			"html/tab-webview-subpage-chat.html",
-			"html/tab-webview-subpage-contact.html",
-			"html/tab-webview-subpage-about.html",
-			"html/setting.html",
-			"html/tab-webview-subpage-me.html",
-			"html/tab-webview-subpage-news.html",
-			"html/tab-webview-subpage-home.html"
-		]
-	},
-	"html/template.html": {
-		"resources": [
-			"fonts/mui.ttf"
-		],
-		"refer": []
-	},
-	"html/guide.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": []
-	},
-	"html/tab-webview-subpage-chat.html": {
-		"resources": [
-			"fonts/mui.ttf",
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": []
-	},
-	"html/tab-webview-subpage-contact.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"images/60x60.gif"
-		],
-		"refer": []
-	},
-	"html/setting.html": {
-		"resources": [
-			"libs/easymob-webim-sdk/easemob.im-1.0.5.js",
-			"libs/easymob-webim-sdk/json2.js",
-			"libs/easymob-webim-sdk/jquery-1.11.1.js",
-			"js/mui.locker.js",
-			"js/feedback.js",
-			"js/feedback-page.js",
-			"libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
-			"js/mui.view.js",
-			"js/app.js",
-			"js/mui.min.js",
-			"fonts/mui.ttf",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"login.html"
-		]
-	},
-	"html/main.html": {
-		"resources": [
-			"js/app.js",
-			"js/mui.min.js",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"html/tab-webview-subpage-about.html",
-			"html/tab-webview-subpage-home.html"
-		],
-		"refer": [
-			"html/setting.html",
-			"html/tab-webview-subpage-chat.html",
-			"html/tab-webview-subpage-contact.html",
-			"html/tab-webview-subpage-about.html",
-			"html/tab-webview-subpage-setting.html",
-			"html/tab-webview-subpage-me.html",
-			"html/tab-webview-subpage-home.html",
-			"html/tab-webview-subpage-news.html"
-		]
-	},
-	"unlock.html": {
-		"resources": [
-			"js/mui.locker.js"
-		],
-		"refer": []
-	},
-	"html/tab-webview-subpage-home.html": {
-		"resources": [
-			"images/firm1.jpg",
-			"images/yuantiao.jpg",
-			"images/firm4.jpg",
-			"images/firm2.jpg",
-			"images/firm3.jpg",
-			"firmInfo/firm1.html",
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"firmInfo/firm1.html"
-		]
-	},
-	"html/tab-webview-subpage-news.html": {
-		"resources": [
-			"css/app.css",
-			"js/mui.min.js",
-			"css/mui.min.css"
-		]
-	},
-	"firmInfo/firm1.html": {
-		"resources": [
-			"fonts/mui.ttf"
-		]
-	}
+  "main.html": {
+    "refer": [
+      "setting.html",
+      "html/setting.html"
+    ],
+    "resources": [
+      "js/app.js",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/mui.ttf"
+    ]
+  },
+  "login.html": {
+    "resources": [
+      "js/app.js",
+      "js/mui.min.js",
+      "images/sinaweibo.png",
+      "css/mui.min.css",
+      "css/style.css",
+      "images/weixin.png",
+      "images/qq.png",
+      "js/mui.enterfocus.js",
+      "fonts/mui.ttf",
+      "css/app.css",
+      "images/user-photo.png",
+      "images/default-headimg1.png",
+      "images/login_bg.png",
+      "images/login_bg1.png",
+      "images/login_bg2.png",
+      "images/login_bg3.png",
+      "images/default-headimg3.png"
+    ],
+    "refer": [
+      "main.html",
+      "html/tab-webview-main.html",
+      "html/template.html",
+      "html/guide.html",
+      "forget_password.html",
+      "reg.html",
+      "html/main.html",
+      "unlock.html"
+    ]
+  },
+  "setting.html": {
+    "resources": [
+      "libs/easymob-webim-sdk/easemob.im-1.0.5.js",
+      "fonts/mui.ttf",
+      "libs/easymob-webim-sdk/json2.js",
+      "libs/easymob-webim-sdk/jquery-1.11.1.js",
+      "js/mui.locker.js",
+      "js/feedback.js",
+      "css/feedback-page.css",
+      "js/feedback-page.js",
+      "libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
+      "js/mui.view.js",
+      "js/app.js",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "images/iconfont-tianjia.png"
+    ],
+    "refer": [
+      "login.html"
+    ]
+  },
+  "html/tab-webview-main.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "html/tab-webview-subpage-about.html",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "html/tab-webview-subpage-chat.html",
+      "html/tab-webview-subpage-home.html",
+      "js/app.js"
+    ],
+    "refer": [
+      "html/tab-webview-subpage-setting.html",
+      "html/tab-webview-subpage-chat.html",
+      "html/tab-webview-subpage-contact.html",
+      "html/tab-webview-subpage-about.html",
+      "html/setting.html",
+      "html/tab-webview-subpage-me.html",
+      "html/tab-webview-subpage-news.html",
+      "html/tab-webview-subpage-home.html"
+    ]
+  },
+  "html/template.html": {
+    "resources": [
+      "fonts/mui.ttf"
+    ],
+    "refer": []
+  },
+  "html/guide.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "html/tab-webview-subpage-chat.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "html/tab-webview-subpage-contact.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "images/60x60.gif"
+    ],
+    "refer": []
+  },
+  "html/setting.html": {
+    "resources": [
+      "libs/easymob-webim-sdk/easemob.im-1.0.5.js",
+      "libs/easymob-webim-sdk/json2.js",
+      "libs/easymob-webim-sdk/jquery-1.11.1.js",
+      "js/mui.locker.js",
+      "js/feedback.js",
+      "js/feedback-page.js",
+      "libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
+      "js/mui.view.js",
+      "js/app.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "login.html"
+    ]
+  },
+  "html/main.html": {
+    "resources": [
+      "js/app.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "html/tab-webview-subpage-about.html",
+      "html/tab-webview-subpage-home.html"
+    ],
+    "refer": [
+      "html/setting.html",
+      "html/tab-webview-subpage-chat.html",
+      "html/tab-webview-subpage-contact.html",
+      "html/tab-webview-subpage-about.html",
+      "html/tab-webview-subpage-setting.html",
+      "html/tab-webview-subpage-me.html",
+      "html/tab-webview-subpage-home.html",
+      "html/tab-webview-subpage-news.html"
+    ]
+  },
+  "unlock.html": {
+    "resources": [
+      "js/mui.locker.js"
+    ],
+    "refer": []
+  },
+  "html/tab-webview-subpage-home.html": {
+    "resources": [
+      "images/firm1.jpg",
+      "images/yuantiao.jpg",
+      "images/firm4.jpg",
+      "images/firm2.jpg",
+      "images/firm3.jpg",
+      "firmInfo/firm1.html",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "firmInfo/firm1.html"
+    ]
+  },
+  "html/tab-webview-subpage-news.html": {
+    "resources": [
+      "css/app.css",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ]
+  },
+  "firmInfo/firm1.html": {
+    "resources": [
+      "fonts/mui.ttf"
+    ]
+  }
 }
